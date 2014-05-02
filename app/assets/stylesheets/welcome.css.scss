@@ -1,0 +1,46 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#header {
+  position: fixed;
+  top: 0px;
+  left: 0; right: 0;
+}
+
+#dag-container {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+}
+
+$boxpad: 1em;
+$boxcolor: rgba(0, 50, 255, 0.7);
+
+.box {
+  color: white;
+  background-color: $boxcolor;
+  padding: $boxpad;
+
+  :first-child{
+    margin-top: $boxpad/10;
+  }
+  :last-child{
+    margin-bottom: 0;
+  }
+}
+
+.registrar {
+  position: fixed;
+  right: 0;
+  top: 4em;
+  border-top-left-radius:$boxpad;
+  border-bottom-left-radius:$boxpad;
+}
+
+.leaderboard {
+  position: fixed;
+  left: 0;
+  top: 4em;
+  border-top-right-radius:$boxpad;
+  border-bottom-right-radius:$boxpad;
+}

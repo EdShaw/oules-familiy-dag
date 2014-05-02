@@ -1,0 +1,21 @@
+#header
+  %h1 OULES Family DAG
+
+#dag-container
+  DAG GOES HERE
+
+.registrar.box
+  %h2 Registrar
+  Register a family relation.
+  = form_for :registered do |f|
+    %p
+      = f.label :parents
+      = f.text_field :parents
+    %p
+      = f.label :person
+      = f.text_field :person
+    %p
+    = f.submit
+.leaderboard.box
+  %h2 Family Leaderboard
+  Family scores here.
