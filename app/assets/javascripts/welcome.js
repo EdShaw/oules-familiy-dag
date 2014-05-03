@@ -1,34 +1,39 @@
-function makeGraph(error, nodes, edges){
+$(function(){
 
-  var g = new dagre.Digraph();
   var svg = d3.select("#dag-container");
   var svg_group = d3.select("#dag");
 
-  nodes.forEach(function(e,i,a){
-    g.addNode(e.id, {label: e.name});
-  });
+  function zoomed() {
+    svg_group.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+  }
 
-  edges.forEach(function(e,i,a){
-    g.addEdge(null, e.parent_id, e.child_id);
-  })
+  var zoom = d3.behavior.zoom()
+      .translate([0, 0])
+      .scale(1)
+      .scaleExtent([1, 8])
+      .on("zoom", zoomed);
 
-  var layout = dagre.layout().run(g);
+  function makeGraph(error, nodes, edges){
 
-  console.log(layout)
+    var g = new dagre.Digraph();
 
-  var renderer = new dagreD3.Renderer();
-  renderer.run(g, svg_group);
+    nodes.forEach(function(e,i,a){
+      g.addNode(e.id, {label: e.name});
+    });
 
-  svg.call(d3.behavior.zoom().on("zoom", function() {
-    var ev = d3.event;
-    svg_group
-      .attr("transform", "translate(" + ev.translate + ") scale(" + ev.scale + ")");
-  }));
+    edges.forEach(function(e,i,a){
+      g.addEdge(null, e.parent_id, e.child_id);
+    })
 
-}
+    var layout = dagre.layout().run(g);
 
+    console.log(layout)
 
-$(function(){
+    var renderer = new dagreD3.Renderer();
+    renderer.run(g, svg_group);
+
+    svg.call(zoom);
+  }
 
   queue()
       .defer(d3.json, '/people.json')
