@@ -30,6 +30,4 @@ test:
 #
 production:
   <<: *default
-  database: familydag_production
-  username: familydag
-  password: <%= ENV['FAMILYDAG_DATABASE_PASSWORD'] %>
+  url: <%= ENV['HEROKU_POSTGRESQL_WHITE_URL'] %>
