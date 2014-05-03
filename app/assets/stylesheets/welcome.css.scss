@@ -1,18 +1,49 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  margin:0;
+  padding:0;
+  overflow:hidden
+}
+
 #header {
   position: fixed;
   top: 0px;
   left: 0; right: 0;
 }
 
-#dag-container {
-  position: fixed;
-  top: 25%;
-  left: 25%;
+//SVG
+svg {
+    overflow: hidden;
 }
 
+#dag {
+  position:fixed;
+  top:0; left:0;
+  height:100%; width:100%
+}
+
+
+.node rect {
+    stroke: #333;
+    stroke-width: 1.5px;
+    fill: #fff;
+}
+
+.edgeLabel rect {
+    fill: #fff;
+}
+
+.edgePath {
+    stroke: #333;
+    stroke-width: 1.5px;
+    fill: none;
+}
+
+
+// Tools
 $boxpad: 1em;
 $boxcolor: rgba(0, 50, 255, 0.7);
 

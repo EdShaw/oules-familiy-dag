@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//= require d3
+//= require dagre.js
+//= require dagre-d3.js
