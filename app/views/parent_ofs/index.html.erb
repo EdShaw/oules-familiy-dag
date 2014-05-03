@@ -1,0 +1,22 @@
+<h1>Listing parent_ofs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parent_ofs.each do |parent_of| %>
+      <tr>
+        <td><%= parent_of.parent_id %></td>
+        <td><%= parent_of.child_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parent of', new_parent_of_path %>

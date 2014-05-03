@@ -1,18 +1,14 @@
-$(function(){
+function makeGraph(error, nodes, edges){
+
   var g = new dagre.Digraph();
 
-  g.addNode("a", {label: "Edd"});
-  g.addNode("b", {label: "Ben"});
-  g.addNode("c", {label: "Claire"});
-  g.addNode("d", {label: "Din"});
-  g.addNode("e", {label: "Elena"});
+  nodes.forEach(function(e,i,a){
+    g.addNode(e.id, {label: e.name});
+  });
 
-  g.addEdge(null, "a", "b");
-  g.addEdge(null, "a", "c");
-  g.addEdge(null, "c", "d");
-  g.addEdge(null, "b", "d");
-  g.addEdge(null, "b", "e");
-
+  edges.forEach(function(e,i,a){
+    g.addEdge(null, e.parent_id, e.child_id);
+  })
 
   var layout = dagre.layout().run(g);
 
@@ -20,4 +16,12 @@ $(function(){
 
   var renderer = new dagreD3.Renderer();
   renderer.run(g, d3.select("#dag"));
+}
+
+
+$(function(){
+
+  queue().defer(d3.json, '/people.json')
+       .defer(d3.json, '/parent_ofs.json')
+       .await(makeGraph);
 });

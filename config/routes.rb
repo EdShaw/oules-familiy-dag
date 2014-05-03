@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :registrations
   resources :people
+  resources :parent_ofs
 
   root 'welcome#index'
 
