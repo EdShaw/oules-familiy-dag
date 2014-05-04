@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '~> 4.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -30,8 +30,8 @@ gem 'haml'
 gem "d3-rails"
 
 gem 'composite_primary_keys', {
-  :git => 'git://github.com/composite-primary-keys/composite_primary_keys.git',
-  :branch => 'ar_4.1.x'
+  :git => 'https://github.com/justin808/composite_primary_keys.git',
+  :branch => 'ar_4.1.x',
 }
 
 

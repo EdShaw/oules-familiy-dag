@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/justin808/composite_primary_keys.git
+  revision: 26e64b739d4ded27268cd7f8660beb57119a4e14
+  branch: ar_4.1.x
+  specs:
+    composite_primary_keys (6.0.1)
+      activerecord (>= 4.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -36,8 +44,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    composite_primary_keys (6.0.3)
-      activerecord (>= 4.0.0)
     d3-rails (3.4.4)
       railties (>= 3.1)
     erubis (2.7.0)
@@ -46,7 +52,7 @@ GEM
       tilt
     hike (1.2.3)
     i18n (0.6.9)
-    jbuilder (2.0.6)
+    jbuilder (2.0.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.0)
@@ -124,13 +130,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  composite_primary_keys (~> 6.0.3)
+  composite_primary_keys!
   d3-rails
   haml
   jbuilder (~> 2.0)
   jquery-rails
   pg
-  rails (= 4.1.0)
+  rails (~> 4.1.0)
   rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
