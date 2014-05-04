@@ -29,6 +29,8 @@ gem 'haml'
 #d3
 gem "d3-rails"
 
+gem "composite_primary_keys", "~>6.0.3"
+
 
 gem 'rails_12factor', group: :production
 
