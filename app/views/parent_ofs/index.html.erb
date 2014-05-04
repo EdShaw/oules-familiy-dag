@@ -12,6 +12,9 @@
       <tr>
         <td><%= parent_of.parent_id %></td>
         <td><%= parent_of.child_id %></td>
+        <td><%= link_to 'Show', parent_of %></td>
+        <td><%= link_to 'Edit', edit_parent_of_path(parent_of) %></td>
+        <td><%= link_to 'Destroy', parent_of, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

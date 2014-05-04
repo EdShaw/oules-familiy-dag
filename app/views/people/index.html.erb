@@ -11,6 +11,7 @@
   <tbody>
     <% @people.each do |person| %>
       <tr>
+        <td><%= person.id %></td>
         <td><%= person.name %></td>
         <td><%= link_to 'Show', person %></td>
         <td><%= link_to 'Edit', edit_person_path(person) %></td>

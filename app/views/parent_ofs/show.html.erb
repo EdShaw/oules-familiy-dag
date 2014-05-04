@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Parent ID:</strong>
+  <%= @parent_of.parent_id %>
+</p>
+
+<p>
+  <strong>Child ID:</strong>
+  <%= @parent_of.child_id %>
+</p>
+
 <%= link_to 'Edit', edit_parent_of_path(@parent_of) %> |
 <%= link_to 'Back', parent_ofs_path %>
