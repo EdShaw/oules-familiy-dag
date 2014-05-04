@@ -1,22 +1,23 @@
-#header
-  %h1 OULES Family DAG
+#family-dag-application
+  #header
+    %h1 OULES Family DAG
 
-#dag-container
-  %svg#dag-svg{:width=>"100%", :height=>"100%", :preserveAspectRatio=>"xMidYMin"}
-    %g#dag
+  #dag-container
+    %svg#dag-svg{:width=>"100%", :height=>"100%", :preserveAspectRatio=>"xMidYMin"}
+      %g#dag
 
-.registrar.box
-  %h2 Registrar
-  Register a family relation.
-  = form_for :registered do |f|
-    %p
-      = f.label :parents
-      = f.text_field :parents
-    %p
-      = f.label :person
-      = f.text_field :person
-    %p
-    = f.submit
-.leaderboard.box
-  %h2 Family Leaderboard
-  Family scores here.
+  .registrar.box
+    %h2 Registrar
+    Register a family relation.
+    = form_for :registered do |f|
+      %p
+        = f.label :parents
+        = f.text_field :parents
+      %p
+        = f.label :person
+        = f.text_field :person
+      %p
+      = f.submit
+  .leaderboard.box
+    %h2 Family Leaderboard
+    Family scores here.
