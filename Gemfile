@@ -34,7 +34,6 @@ gem 'composite_primary_keys', {
   :branch => 'ar_4.1.x',
 }
 
-
 gem 'rails_12factor', group: :production
 
 
