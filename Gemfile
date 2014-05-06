@@ -29,10 +29,10 @@ gem 'haml'
 #d3
 gem "d3-rails"
 
-gem 'composite_primary_keys', {
-  :git => 'https://github.com/justin808/composite_primary_keys.git',
-  :branch => 'ar_4.1.x',
-}
+# gem 'composite_primary_keys', {
+#   :git => 'https://github.com/justin808/composite_primary_keys.git',
+#   :branch => 'ar_4.1.x',
+# }
 
 gem 'rails_12factor', group: :production
 

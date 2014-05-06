@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/justin808/composite_primary_keys.git
-  revision: 26e64b739d4ded27268cd7f8660beb57119a4e14
-  branch: ar_4.1.x
-  specs:
-    composite_primary_keys (6.0.1)
-      activerecord (>= 4.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,7 +122,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  composite_primary_keys!
   d3-rails
   haml
   jbuilder (~> 2.0)
