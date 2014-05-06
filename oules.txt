@@ -167,7 +167,7 @@ tom_woolley [ label="Tom Woolley" ];
 tzveta_pokrovska [ label="Tzveta Pokrovska" ];
 will_minter [ label="Will Minter" ];
 will_smith [ label="Will Smith" ];
-//Edges.
+//edges
 {
     emma_new;
     lotty_spurrell;
